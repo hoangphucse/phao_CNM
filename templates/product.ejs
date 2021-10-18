@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <h1>
+        <a href="/">Go Homepage</a>
+    </h1>
+    <div class="card single">
+        <div class="card-img">
+            <img src="<%=data.url_image%>" alt="">
+        </div>
+
+        <div class="card-name">
+            <a href="/products/<%=data.id%>">
+                <%=data.name%>.
+            </a>
+        </div>
+
+    </div>
+
+    <div class="list-card">
+
+        <%if(data.products){%>
+            <%for(let i=0 ; i < data.products.length ; i++){%>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img src="<%=data.products[i].url_image%>" alt="">
+                    </div>
+
+                    <div class="card-name">
+                        <strong>
+                            <%=data.products[i].name%>.
+                        </strong>
+                    </div>
+
+
+                </div>
+                <%}%>
+                    <%}else{%>
+                        <h3>Không có sản phẩm nào</h3>
+                        <%}%>
+    </div>
+
+
+</body>
+
+</html>

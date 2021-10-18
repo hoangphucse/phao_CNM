@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>home</title>
+
+</head>
+
+<body>
+    <div class="form-input">
+        <form action="/" method="post">
+            <input type="text" name='id' placeholder="id">
+            <input type="text" name='name' placeholder="Name">
+            <input type="text" name='url_image' placeholder="url_image">
+            <input type="submit" value='Submit'>
+
+        </form>
+    </div>
+
+    <div class="list-card">
+
+        <%for(let i=0 ; i < data.length ; i++){%>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="<%=data[i].url_image%>" alt="">
+                </div>
+
+                <div class="card-name">
+                    <a href="/products/<%=data[i].id%>">
+                        <%=data[i].name%>.
+                    </a>
+                </div>
+
+                <div class="card-btn">
+                    <a href="/products/delete/<%=data[i].id%>">
+                        <button>Xóa</button>
+                    </a>
+
+                </div>
+
+            </div>
+            <%}%>
+    </div>
+
+
+</body>
+
+</html>

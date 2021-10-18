@@ -1,0 +1,47 @@
+.list-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+
+.card.single {
+    width: 300px;
+    margin: 0 auto;
+}
+.card {
+    margin: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.card-img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+img {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+body {
+    background: whitesmoke;
+}
+.form-input form {
+    display: flex;
+    justify-content: center;
+}
